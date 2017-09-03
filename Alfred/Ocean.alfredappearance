@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#4F5B67FF",
+        "font" : "System Light",
+        "color" : "#4F5B67FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#333333FF",
+        "font" : "System Light",
+        "color" : "#333333FF"
+      },
+      "backgroundSelected" : "#2B303BFF",
+      "text" : {
+        "size" : 20,
+        "colorSelected" : "#97B5B4FF",
+        "font" : "System Light",
+        "color" : "#90A1B4FF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 2,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 3,
+      "background" : "#2B303BFF",
+      "spacing" : 10,
+      "text" : {
+        "size" : 36,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#A7ADBBFF"
+      },
+      "backgroundSelected" : "#D1CC99FF"
+    },
+    "window" : {
+      "color" : "#2B303BFF",
+      "paddingHorizontal" : 10,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#FFFACD00",
+      "blur" : 0,
+      "roundness" : 12,
+      "paddingVertical" : 10
+    },
+    "credit" : "Florida Elago",
+    "separator" : {
+      "color" : "#343D46FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#D8D2A5FF",
+      "thickness" : 2
+    },
+    "name" : "Ocean"
+  }
+}
