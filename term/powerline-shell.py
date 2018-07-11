@@ -214,37 +214,37 @@ class DefaultColor:
     This class should have the default colors for every segment.
     Please test every new segment with this theme first.
     """
-    USERNAME_FG = 250
-    USERNAME_BG = 240
-    USERNAME_ROOT_BG = 124
+    USERNAME_FG = 10
+    USERNAME_BG = 7
+    USERNAME_ROOT_BG = 7
 
-    HOSTNAME_FG = 250
-    HOSTNAME_BG = 238
+    HOSTNAME_FG = 7
+    HOSTNAME_BG = 5
 
     HOME_SPECIAL_DISPLAY = True
-    HOME_BG = 31  # blueish
+    HOME_BG = 10  # blueish
     HOME_FG = 15  # white
-    PATH_BG = 237  # dark grey
-    PATH_FG = 250  # light grey
-    CWD_FG = 254  # nearly-white grey
-    SEPARATOR_FG = 244
+    PATH_BG = 5  # dark grey
+    PATH_FG = 7  # light grey
+    CWD_FG = 7  # nearly-white grey
+    SEPARATOR_FG = 7
 
-    READONLY_BG = 124
-    READONLY_FG = 254
+    READONLY_BG = 13
+    READONLY_FG = 7
 
-    SSH_BG = 166 # medium orange
-    SSH_FG = 254
+    SSH_BG = 3 # medium orange
+    SSH_FG = 7
 
-    REPO_CLEAN_BG = 148  # a light green color
+    REPO_CLEAN_BG = 10  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 161  # pink/red
-    REPO_DIRTY_FG = 15  # white
+    REPO_DIRTY_BG = 9  # pink/red
+    REPO_DIRTY_FG = 7  # white
 
-    JOBS_FG = 39
-    JOBS_BG = 238
+    JOBS_FG = 7
+    JOBS_BG = 13
 
-    CMD_PASSED_BG = 236
-    CMD_PASSED_FG = 15
+    CMD_PASSED_BG = 12
+    CMD_PASSED_FG = 7
     CMD_FAILED_BG = 161
     CMD_FAILED_FG = 15
 
@@ -264,7 +264,7 @@ class DefaultColor:
     GIT_CONFLICTED_BG = 9
     GIT_CONFLICTED_FG = 15
 
-    VIRTUAL_ENV_BG = 35  # a mid-tone green
+    VIRTUAL_ENV_BG = 10  # a mid-tone green
     VIRTUAL_ENV_FG = 00
 
 class Color(DefaultColor):
