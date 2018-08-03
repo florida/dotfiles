@@ -2,21 +2,19 @@
 
 # Base16 Shell
 if status --is-interactive
-  eval sh $HOME/.config/term/base16-ocean.sh
+#  eval sh $HOME/.config/term/base16-ocean.sh
 end
 
 function fish_prompt
-  ~/powerline-shell.py $status --shell bare ^/dev/null
+  ~/.config/powerline-shell.py $status --shell bare ^/dev/null
   printf "\n\u276F "
 end
 
 set -x RBENV_HOME "$HOME/.rbenv"
-set -x RUBY_BUILD "$HOME/.rbenv/plugins/ruby-build/bin"
 set -x EDITOR vim
 
 set PATH bin $PATH
 set PATH $RBENV_HOME $PATH
-set PATH $RUBY_BUILD $PATH
 set PATH $HOME/.rbenv/ $PATH
 set PATH $HOME/.rbenv/shims $PATH
 set PATH /usr/local/sbin $PATH
