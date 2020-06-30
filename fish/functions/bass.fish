@@ -1,1 +1,0 @@
-/Users/florida.elago/.config/fisherman/bass/functions/bass.fish
