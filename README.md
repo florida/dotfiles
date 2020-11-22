@@ -36,7 +36,3 @@ Import iterm colours from `term/OceanPreset.itermcolors`
 ### Install additional dev Tools
 
 `./extras.sh` 
-
-### Atom config
-
-`apm install 	prettier editorconfig material sort-lines autoclosehtml automcomplete modules docblocker emmet es6 react pigments hyperclick linter-eslint linter css`
