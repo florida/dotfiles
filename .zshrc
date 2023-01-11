@@ -106,8 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="code ~/.zshrc"
-alias serve-web="cd ~/Splice/platform/surfaces ;npx nx serve web"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -116,5 +114,36 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#949494,underline"
 
 . ~/.oh-my-zsh/custom/plugins/z/z.sh
 
+export NVM_DIR=~/.nvm
 
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+source $(echo $NVM_DIR)/nvm.sh
+source "$SPLICE_API/config/development/docker-shell.sh"
+
+export NODE_OPTIONS="--max_old_space_size=4096"
+export USER_PASSWORD="JV..QtXkdngYqqBatvY_jX6e"
+export SPLICE_AWS_CREDS_MANAGER="saml2aws"
+export SPLICE_API="$HOME/go/src/github.com/splice/api"
+export SPLICE_PLATFORM="$HOME/go/src/github.com/splice/platform"
+
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+export GOBIN="$GOROOT/bin"
+export GOMODCACHE=$HOME/Library/Caches/go/pkg/mod/cache
+export GO111MODULES="on"
+export GOPRIVATE="github.com/splice,github.com/splice/*"
+
+# Tell the SDK to load ~/.aws/config and what profile to use
+export AWS_SDK_LOAD_CONFIG=1
+export AWS_PROFILE=splice
+# You may want to set your region manually as well
+export AWS_REGION=us-west-1
+# Depending on what SDK you use, you might want to also set
+export AWS_DEFAULT_REGION=us-west-1
+
+
+export PATH="/usr/local/opt/python@3.8/bin:/Users/florida/.nvm:$GOBIN:$PATH"
+
+alias zshconfig="code ~/.zshrc"
+alias serve-web="cd ~/Splice/platform/surfaces ;npx nx serve web"
+alias graphqlservemocks="MOCK_RESOLVERS=all npx ng run graphql:serve"
+alias awslogin="$SPLICE_PLATFORM/docker-login.sh"
