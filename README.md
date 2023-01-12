@@ -2,34 +2,32 @@
 
 ## Development Tools Setup
 
-### Install Homebrew and packages
+### Terminal Setup and Installing Command Line Tools
 
-`./bash.sh` 
-
-### Terminal Setup
-
-Add `/usr/local/bin/fish` to `/etc/shells` to set fish as default shell
-
-```
-$ echo "/usr/local/bin/fish" >> /etc/shells
+```bash
+$ ./cli_setup.sh 
 ```
 
-Run command to update default shell
+This script would set up the following and it's dependencies
 
-```
-$ chsh -s /usr/local/bin/fish
+* Xcode Command Line Tools
+* HomeBrew 
+* GNU GPG
+* OhMyZsh
+* NVM (Node Version Manager)
+* Removing Terminal login message
+
+### Git SSH and GPG setup
+
+```bash
+$ ./git_setup.sh
 ```
 
-Copy powerline config to home folder
+This script would setup the following
 
-```
-cp term/powerline.py ~/.config/term
-```
-
-Copy base16-ocean preset
-```
-cp term/base16-ocean.sh ~/.config/term
-```
+* Global git config
+* Generates SSH key
+* Generates GPG key 
 
 Import iterm colours from `term/OceanPreset.itermcolors`
 
