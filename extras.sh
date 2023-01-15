@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 rbenv install 2.5.1
 rbenv global 2.5.1
 
@@ -8,4 +8,3 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 
 gem install lolcat
 gem update --system
-fisher edc/bass

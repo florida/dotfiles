@@ -1,12 +1,12 @@
 #!/bin/bash
 
-Color_Off='\033[0m'       # Text Reset
-
 # Bold
 BBlack='\033[1;30m'       # Black
 BRed='\033[1;31m'         # Red
 BGreen='\033[1;32m'       # Green
 BYellow='\033[1;33m'      # Yellow
+
+Color_Off='\033[0m'       # Text Reset
 
 write_banner() {
   local text="$1"
@@ -69,7 +69,7 @@ if prompt_user "Would you like to install XCode Command Line Tools?(y/n) "; then
     xcode-select --install
     success_text "XCode Command Line Tools installed"
 else
-    info_text "Skipping installing XCode Command Line Tools..." $BYellow
+    info_text "Skipping installing XCode Command Line Tools..."
 fi
 
 # Homebrew Install
@@ -78,7 +78,7 @@ if prompt_user "Would you like to install Homebrew?(y/n) "; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     success_text "Homebrew installed"
 else
-    info_text "Skipping installing Homebrew..." $BYellow
+    info_text "Skipping installing Homebrew..."
 fi
 
 # GnuGPG Install
@@ -87,7 +87,7 @@ if prompt_user "Would you like to install GNU GPG(y/n) "; then
     brew install gnupg
     success_text "GNU GPG installed"
 else
-    info_text "Skipping installing GNU GPG..." $BYellow
+    info_text "Skipping installing GNU GPG..."
 fi
 
 # OhMyZsh install
@@ -97,16 +97,7 @@ if prompt_user "Would you like to install OhMyZsh?(y/n) "; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     success_text "OhMyZsh installed"
 else
-    info_text "Skipping installing OhMyZsh..." $BYellow
-fi
-
-# NVM install
-if prompt_user "Would you like to install NVM?(y/n) "; then
-    info_text "Installing NVM..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-    success_text "NVM installed"
-else
-    info_text "Skipping installing NVM..." $BYellow
+    info_text "Skipping installing OhMyZsh..."
 fi
 
 # Terminal login message removal setup
@@ -115,7 +106,7 @@ if prompt_user "Would you like to remove terminal login message?"; then
     touch .hushlogin
     success_text "Terminal login message removed"
 else
-    info_text "Skipping removing terminal login message..." $BYellow
+    info_text "Skipping removing terminal login message..."
 fi
 
 write_banner "Command Line Tools and Terminal setup complete! Goodbye!"
