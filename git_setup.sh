@@ -147,6 +147,15 @@ generate_gpg_keys() {
 
 write_banner "HI! WELCOME TO YOUR GIT SSH & GPG SETUP"
 
+# Github CLI install
+if prompt_user "Would you like to install Github CLI?(y/n) "; then
+    info_text "Installing Github CLI..."
+    brew install gh
+    success_text "Github CLI installed"
+else
+    info_text "Skipping installing Github CLI..."
+fi
+
 ## SSH SETUP PROMPT
 if prompt_user "Do you want to setup SSH?(y/n) "; then
     write_banner "SSH SETUP"
