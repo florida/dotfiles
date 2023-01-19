@@ -109,4 +109,13 @@ else
     info_text "Skipping removing terminal login message..."
 fi
 
+# Lolcat install
+if prompt_user "Would you like to install lolcat?"; then
+    info_text "Installing lolcat..."
+    brew install lolcat
+    success_text "lolcat installed"
+else
+    info_text "Skipping installing lolcat..."
+fi
+
 write_banner "Command Line Tools and Terminal setup complete! Goodbye!"

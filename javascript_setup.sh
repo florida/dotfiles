@@ -61,14 +61,24 @@ prompt_user() {
   done
 }
 
-# install yarn & node
-# brew install yarn
-
-# NVM install
-if prompt_user "Would you like to install NVM?(y/n) "; then
-    info_text "Installing NVM..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-    success_text "NVM installed"
+# NVM Install
+if [ -f "$NVM_DIR" ]; then
+    source "${NVM_DIR}/nvm.sh"
+    info_text "NVM already installed"
 else
-    info_text "Skipping installing NVM..."
+    if prompt_user "Would you like to install nvm?(y/n) "; then
+        info_text "Installing nvm..."
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+        success_text "nvm installed"
+    else
+        info_text "Skipping installing nvm..."
+    fi
+fi
+
+if prompt_user "Would you like to install Node with nvm?(y/n) "; then
+    info_text "Installing Node..."
+    nvm install node
+    success_text "Node installed"
+else
+    info_text "Skipping installing Node..."
 fi
