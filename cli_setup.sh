@@ -100,6 +100,31 @@ else
     info_text "Skipping installing OhMyZsh..."
 fi
 
+# ZSH Powerline install
+if prompt_user "Would you like to install ZSH Powerline?(y/n) "; then
+    info_text "Installing ZSH Powerline..."
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    success_text "ZSH Powerline installed"
+else
+    info_text "Skipping installing ZSH Powerline..."
+fi
+
+if prompt_user "Would you like to install ZSH Autosuggestions?(y/n) "; then
+    info_text "Installing ZSH Autosuggestions..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    success_text "ZSH Autosuggestions installed"
+else
+    info_text "Skipping installing ZSH Autosuggestions..."
+fi
+
+if prompt_user "Would you like to install ZSH Completions?(y/n) "; then
+    info_text "Installing ZSH Completions..."
+    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+    success_text "ZSH Completions installed"
+else
+    info_text "Skipping installing ZSH Completions..."
+fi
+
 # Terminal login message removal setup
 if prompt_user "Would you like to remove terminal login message?"; then
     info_text "Removing terminal login message..."
